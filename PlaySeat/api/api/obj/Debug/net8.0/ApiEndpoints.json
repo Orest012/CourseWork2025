@@ -264,8 +264,28 @@
   },
   {
     "ContainingType": "api.Controllers.TicketsController",
+    "Method": "ExportUserTickets",
+    "RelativePath": "api/Tickets/ExportUserTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.TicketsController",
     "Method": "GetMyTickets",
     "RelativePath": "api/Tickets/MyTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.TicketsController",
+    "Method": "GetTopEvent",
+    "RelativePath": "api/Tickets/top-event",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

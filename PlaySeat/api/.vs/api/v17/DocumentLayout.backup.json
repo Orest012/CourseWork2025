@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|c:\\users\\orest\\desktop\\\u043A\u0443\u0440\u0441\u0430\u0447\\playseat\\api\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|c:\\users\\orest\\desktop\\\u043A\u0443\u0440\u0441\u0430\u0447\\playseat\\api\\api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|solutionrelative:api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|c:\\users\\orest\\desktop\\\u043A\u0443\u0440\u0441\u0430\u0447\\playseat\\api\\api\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|solutionrelative:api\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|c:\\users\\orest\\desktop\\\u043A\u0443\u0440\u0441\u0430\u0447\\playseat\\api\\api\\models\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|solutionrelative:api\\models\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|c:\\users\\orest\\desktop\\\u043A\u0443\u0440\u0441\u0430\u0447\\playseat\\api\\api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C5DE640-470A-48C8-8D9D-DA154864DD41}|api\\api.csproj|solutionrelative:api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Organizer.cs",
-              "DocumentMoniker": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\Organizer.cs",
-              "RelativeDocumentMoniker": "api\\Models\\Organizer.cs",
-              "ToolTip": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\Organizer.cs",
-              "RelativeToolTip": "api\\Models\\Organizer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T01:18:06.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "api\\Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\Payment.cs",
-              "RelativeToolTip": "api\\Models\\Payment.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvw0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T01:15:56.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "api\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "api\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGgAAAAJAAAAAAAAAA==",
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "api\\Controllers\\TicketsController.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAAL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T00:41:13.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\User.cs",
-              "RelativeDocumentMoniker": "api\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\orest\\Desktop\\\u041A\u0443\u0440\u0441\u0430\u0447\\PlaySeat\\api\\api\\Models\\User.cs",
-              "RelativeToolTip": "api\\Models\\User.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA2wBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T00:44:55.108Z",
+              "WhenOpened": "2025-05-07T07:00:25.697Z",
               "EditorCaption": ""
             }
           ]

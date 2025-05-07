@@ -27,6 +27,14 @@ public partial class ApplicationDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<Venue> Venues { get; set; }
+    public virtual DbSet<TopEventResult> TopEventResults { get; set; }
+
+    public async Task<List<TopEventResult>> GetTopEventByTicketsSoldAsync()
+    {
+        return await this.Set<TopEventResult>()
+            .FromSqlRaw("SELECT * FROM GetTopEventByTicketsSold_2()")
+            .ToListAsync();
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.

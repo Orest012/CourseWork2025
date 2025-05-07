@@ -395,6 +395,18 @@
         }
       }
     },
+    "/api/Tickets/top-event": {
+      "get": {
+        "tags": [
+          "Tickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tickets": {
       "post": {
         "tags": [
@@ -427,6 +439,18 @@
       }
     },
     "/api/Tickets/MyTickets": {
+      "get": {
+        "tags": [
+          "Tickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Tickets/ExportUserTickets": {
       "get": {
         "tags": [
           "Tickets"

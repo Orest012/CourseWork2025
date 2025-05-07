@@ -1,6 +1,7 @@
 ﻿using api.Data;
 using api.DTO;
 using api.Interaces;
+using api.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -100,18 +101,80 @@ namespace api.Controllers
         }
 
 
+        //[HttpPost("register")]
+        //public IActionResult Register([FromBody] UserRegisterDto request)
+        //{
+        //    var respond = _accountService.Register(request);
+        //    if (respond == null)
+        //    {
+        //        return BadRequest("Користувач з таким email вже існує.");
+        //    }
+        //    return Ok(new { Token = respond });
+        //}
+
         [HttpPost("register")]
         public IActionResult Register([FromBody] UserRegisterDto request)
         {
-            var respond = _accountService.Register(request);
-            if (respond == null)
+            // Перевірка, чи користувач з таким email вже існує
+            var existingUser = _applicationDbContext.Users.Any(u => u.Email == request.Email);
+            if (existingUser)
             {
                 return BadRequest("Користувач з таким email вже існує.");
             }
 
+            // Хешування пароля
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
-            return Ok(new { Token = respond });
+            // Отримання наступного UserId
+            var nextUserId = (_applicationDbContext.Users.Max(u => (long?)u.UserId) ?? 0) + 1;
+
+            // Створення нового користувача
+            var newUser = new User
+            {
+                UserId = nextUserId,
+                Email = request.Email,
+                Name = request.Name,
+                Password = hashedPassword,
+                CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow),
+                Role = "User"
+            };
+
+            _applicationDbContext.Users.Add(newUser);
+
+            // Отримання наступного PaymentId
+            var nextPaymentId = (_applicationDbContext.Payments.Max(p => (long?)p.PaymentId) ?? 0) + 1;
+
+            var payment = new Payment
+            {
+                PaymentId = nextPaymentId,
+                UserId = newUser.UserId,
+                PaymentDate = DateTime.UtcNow,
+                Amount = 0,
+                PaymentMethod = "Не вказано"
+            };
+
+            _applicationDbContext.Payments.Add(payment);
+
+            // Якщо роль — Admin, додаємо в Organizers
+            if (newUser.Role == "Admin")
+            {
+                var nextOrganizerId = (_applicationDbContext.Organizers.Max(o => (long?)o.OrganizerId) ?? 0) + 1;
+
+                var organizer = new Organizer
+                {
+                    OrganizerId = nextOrganizerId,
+                    UserId = newUser.UserId
+                };
+
+                _applicationDbContext.Organizers.Add(organizer);
+            }
+
+            _applicationDbContext.SaveChanges();
+
+            return Ok(new { message = "Користувач зареєстрований успішно." });
         }
+
+
 
     }
 }

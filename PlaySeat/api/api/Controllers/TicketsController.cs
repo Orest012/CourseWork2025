@@ -3,6 +3,7 @@ using api.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NpgsqlTypes;
 using System;
 using System.Security.Claims;
 
@@ -94,6 +95,32 @@ namespace api.Controllers
 
 
 
+        [HttpGet("top-event")]
+        public async Task<IActionResult> GetTopEvent()
+        {
+            try
+            {
+                var result = await _context
+                    .Set<TopEventResult>() 
+                    .FromSqlRaw("SELECT * FROM GetTopEventByTicketsSold_2()")
+                    .ToListAsync();
+
+                if (result == null || result.Count == 0)
+                {
+                    return NotFound("No events found");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+
+
         [HttpPost]
         public async Task<IActionResult> CreateTicket(Ticket ticket)
         {
@@ -129,6 +156,41 @@ namespace api.Controllers
 
             return Ok(tickets);
         }
+
+
+        [HttpGet("ExportUserTickets")]
+        public async Task<IActionResult> ExportUserTickets()
+        {
+            var userIdClaim = User.FindFirst("UserId")?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !long.TryParse(userIdClaim, out var userId))
+            {
+                return BadRequest("userId не знайдено або неправильного формату.");
+            }
+
+            await using var connection = _context.Database.GetDbConnection();
+            await connection.OpenAsync();
+
+            await using var command = connection.CreateCommand();
+            command.CommandText = "SELECT ExportUserTicketsToJson_3(@userId)";
+
+            var userIdParam = new Npgsql.NpgsqlParameter("userId", NpgsqlDbType.Bigint)
+            {
+                Value = userId
+            };
+            command.Parameters.Add(userIdParam);
+
+            var jsonResult = await command.ExecuteScalarAsync();
+
+            if (jsonResult == null || jsonResult == DBNull.Value)
+                return NotFound("Квитки не знайдено або користувач не існує.");
+
+            return Content(jsonResult.ToString(), "application/json");
+        }
+
     }
+
+
+
 
 }
