@@ -1,0 +1,141 @@
+.events-list-page {
+    padding: 1.5rem;
+    max-width: 80rem; /* max-w-5xl */
+    margin: 0 auto;
+  }
+  
+  .events-list-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .reset-button {
+    padding: 0.5rem 1rem;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .event-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    justify-content: space-between; /* вирівнювання */
+  }
+  
+  .event-image-wrapper {
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden; /* для згладжених кутів */
+    width: 33%;
+    min-width: 250px;
+    height: 100%;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+
+  
+  .reset-button:hover {
+    background-color: #d1d5db;
+  }
+  
+  .filters-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .filters-container {
+      grid-template-columns: 1fr 1fr 1fr; /* md:grid-cols-3 */
+    }
+  }
+  
+  .filter-input {
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .filter-input:focus {
+    border-color: #60a5fa; /* blue-300 */
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
+  }
+  
+  .event-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .event-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* hover:shadow-md */
+  }
+  
+  .event-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-description {
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-date,
+  .event-venue,
+  .event-sport,
+  .event-organizer {
+    font-size: 0.875rem;
+    color: #6b7280; /* text-sm text-gray-500 */
+  }
+  
+  .event-button {
+    display: inline-block;
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .event-button:hover {
+    background-color: #1d4ed8; /* blue-700 */
+  }
+  
+  .no-events-message {
+    text-align: center;
+    color: #6b7280; /* text-center text-gray-500 */
+  }
+  

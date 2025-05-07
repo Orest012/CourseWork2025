@@ -1,0 +1,64 @@
+/* Загальний стиль для сторінки */
+.user-info-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Стилі для картки з інформацією */
+  .user-info-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .user-info-card p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .user-info-card strong {
+    color: #333;
+  }
+  
+  /* Завантаження */
+  .loading {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #888;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+
+  /* userInfo.css */
+.login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  

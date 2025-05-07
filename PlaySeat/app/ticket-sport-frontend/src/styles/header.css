@@ -1,0 +1,78 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #60a5fa;
+  }
+  
+  .create-event-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-event-button:hover {
+    background-color: #2563eb;
+  }
+  .user-info {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #cbd5e1;
+  }
+    
+  /* Стиль для кнопки "Моя інформація" */
+.user-info-button {
+  padding: 10px 15px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.user-info-button:hover {
+  background-color: #2563eb;
+}
